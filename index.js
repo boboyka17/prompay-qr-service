@@ -5,7 +5,7 @@ const promptpay = require('promptpay-js')
 const uniqid  = require('uniqid'); 
 const QRCode = require('qrcode')
 
-app.get('./qrcode/:id/:amount', (req, res) => {
+app.get('/qrcode/:id/:amount', (req, res) => {
   const id = req.params.id
   const amount = req.params.amount
   const payload = promptpay.generate({
