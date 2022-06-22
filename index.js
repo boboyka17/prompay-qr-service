@@ -4,6 +4,9 @@ const port = process.env.PORT || 3000
 const promptpay = require('promptpay-js')
 const uniqid  = require('uniqid'); 
 const QRCode = require('qrcode')
+const cors = require('cors')
+
+app.use(cors())
 
 app.get('/qrcode/:id/:amount', (req, res) => {
   const id = req.params.id
